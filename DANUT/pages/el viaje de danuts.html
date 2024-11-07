@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Viaje de Danuts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="title-container">
+            <h1>Dona tu día con Danut</h1>
+        </div>
+
+        <!-- Botón de menú hamburguesa para dispositivos móviles -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Contenedor para carrito -->
+        <div class="menu-cart-container">
+            <div class="cart">
+                <a href="#">🛒</a> <!-- Icono del carrito -->
+            </div>
+        </div>
+        
+        <!-- Menú de navegación -->
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="../pages/Contactanos.html">Contáctanos</a></li>
+                <li><a href="../pages/preguntas azucaradas.html">Preguntas Azucaradas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Botón de Regreso al Inicio -->
+    <div class="back-button-container">
+        <a href="../pages/nuestras danuts.html" class="button">Nuestras Danuts</a>
+    </div>
+  
+    <div class="section-container">
+        
+        <div class="image-container">
+            <img src="../images/testimonios dulces/testimonios dulces.jpg" alt="Donut en caja" />
+        </div>   
+        <div class="text-container">
+            <h2>La Dona Mágica</h2>
+            <p>Danahé y Daniel, dos estudiantes con sueños brillantes, decidieron hacer donas con una receta familiar. Cada dona no solo sabía deliciosa, sino que estaba llena de risas y amor.</p>
+            <p>Mientras vendían sus creaciones en el barrio, los clientes volvían no solo por el sabor, sino por las divertidas historias que contaban sobre sus locuras en la cocina.</p>
+            <p>Así, con esfuerzo y un toque de chocolate, demostraron que los sueños se pueden alcanzar... ¡Una dona a la vez!
+            </p>
+        </div>
+    </div>
+
+       <!-- Footer -->
+       <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Información de Contacto</h3>
+                <p>Email: <a href="mailto:contacto@danutplanet.com">contacto@danutplanet.com</a></p>
+                <p>Teléfono: (123) 456-7890</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Síguenos en Redes Sociales</h3>
+                <p>
+                    <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
+                    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>&copy; 2024 Dona Planet. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Función para mostrar/ocultar el menú en dispositivos móviles
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active'); // Alternar la clase activa para mostrar/ocultar el menú
+        });
+    </script>
+</body>
+</html>

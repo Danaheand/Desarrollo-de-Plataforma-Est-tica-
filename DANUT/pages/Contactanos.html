@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - Dona Planet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main.css"> <!-- CSS específico de la página de contacto -->
+</head>
+
+
+<body>
+        <!-- Header -->
+        <header id="header">
+            <div class="title-container">
+                <h1>Dona tu día con Danut</h1>
+            </div>
+    
+            <!-- Botón de menú hamburguesa para dispositivos móviles -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+    
+            <!-- Contenedor para carrito -->
+            <div class="menu-cart-container">
+                <div class="cart">
+                    <a href="#">🛒</a> <!-- Icono del carrito -->
+                </div>
+            </div>
+            
+            <!-- Menú de navegación -->
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="../pages/el viaje de danuts.html">El Viaje de Danuts</a></li>
+                    <li><a href="../pages/preguntas azucaradas.html">Preguntas Azucaradas</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!-- Botón de Regreso al Inicio -->
+        <div class="back-button-container">
+            <a href="../pages/nuestras danuts.html" class="button">Nuestras Danuts</a>
+        </div>
+
+
+    <section class="contact-section">
+        <div class="form-container">
+            <h2>Estamos aquí para ayudarte</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+    
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Información de Contacto</h3>
+                <p>Email: <a href="mailto:contacto@danutplanet.com">contacto@danutplanet.com</a></p>
+                <p>Teléfono: (123) 456-7890</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Síguenos en Redes Sociales</h3>
+                <p>
+                    <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
+                    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>&copy; 2024 Dona Planet. Todos los derechos reservados.</p>
+        </div>
+        
+    </footer>
+
+    <script>
+        // Función para mostrar/ocultar el menú en dispositivos móviles
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active'); // Alternar la clase activa para mostrar/ocultar el menú
+        });
+    </script>
+
+   
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Danuts - Dona Planet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+   <!-- Header -->
+   <header id="header">
+    <div class="title-container">
+        <h1>Dona tu día con Danut</h1>
+    </div>
+
+    <!-- Botón de menú hamburguesa para dispositivos móviles -->
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <!-- Contenedor para carrito -->
+    <div class="menu-cart-container">
+        <div class="cart">
+            <a href="#">🛒</a> <!-- Icono del carrito -->
+        </div>
+    </div>
+    
+    <!-- Menú de navegación -->
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="../pages/el viaje de danuts.html">El Viaje de Danuts</a></li>
+            <li><a href="../pages/Contactanos.html">Contáctanos</a></li>
+            <li><a href="../pages/preguntas azucaradas.html">Preguntas Azucaradas</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Sección de Donas -->
+    <section id="donuts-section">
+        <div class="donut-card">
+            <img src="../images/nuestras danuts/Danut Smile de Manjar.jpg" alt="Smile de Manjar" class="donut-image">
+            <h3>Smile de Manjar</h3>
+            <p>Donut rellena de manjar, con cobertura de maple y sonrisa de chocolate.</p>
+            <p><span class="price-label">Precio:</span> <span class="price">$2.00</span></p>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <button class="buy-now">Cantidad</button>
+
+            <!-- Selector de cantidad -->
+    <div class="quantity-selector">
+        <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+    </div>
+</div>
+
+            
+        </div>
+        <div class="donut-card">
+            <img src="../images/nuestras danuts/Danut Cake Doble Chocolate.jpg" alt="Cake Doble Chocolate" class="donut-image">
+            <h3>Chocolate Doble Cake</h3>
+            <p>Donut cake de chocolate con cobertura de chocolate.</p>
+            <p><span class="price-label">Precio:</span> <span class="price">$1.50</span></p>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <button class="buy-now">Cantidad</button>
+            <!-- Selector de cantidad -->
+    <div class="quantity-selector">
+        <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+    </div>
+</div>
+
+        </div>
+        <div class="donut-card">
+            <img src="../images/nuestras danuts/Danut Chocolate Kreme.jpg" alt="Chocolate Kreme" class="donut-image">
+            <h3>Chocolate Kreme</h3>
+            <p>Donut azucarada rellena y decorada con chocolate kreme.</p>
+            <p><span class="price-label">Precio:</span> <span class="price">$2.50</span></p>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <button class="buy-now">Cantidad</button>
+            <!-- Selector de cantidad -->
+    <div class="quantity-selector">
+        <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+    </div>
+</div>
+
+        </div>
+        <div class="donut-card">
+            <img src="../images/nuestras danuts/Danut Pie de Limon.jpg" alt="Pie de Limón" class="donut-image">
+            <h3>Pie de Limón</h3>
+            <p>Donut rellena de crema de limón, con cobertura de vainilla y coco tostado. Vegana.</p>
+            <p><span class="price-label">Precio:</span> <span class="price">$3.00</span></p>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <button class="buy-now">Cantidad</button>
+            <!-- Selector de cantidad -->
+    <div class="quantity-selector">
+        <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+    </div>
+</div>
+        </div>
+        <div class="donut-card">
+            <img src="../images/nuestras danuts/Danut Chocolate Frosted.jpg" alt="Chocolate Frosted" class="donut-image">
+            <h3>Chocolate Frosted</h3>
+            <p>Con cobertura de chocolate. Vegana para las personas con un gusto tradicional.</p>
+            <p><span class="price-label">Precio:</span> <span class="price">$1.80</span></p>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <button class="buy-now">Cantidad</button>
+            <!-- Selector de cantidad -->
+    <div class="quantity-selector">
+        <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+    </div>
+</div>
+        </div>
+        <div class="donut-card">
+            <img src="../images/nuestras danuts/Danut Frutilla Arcoiris.jpg" alt="Frutilla Arcoíris" class="donut-image">
+            <h3>Frutilla Arcoíris</h3>
+            <p>Donut con cobertura de frutilla y topping de arcoíris. Vegana.</p>
+            <p><span class="price-label">Precio:</span> <span class="price">$1.90</span></p>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <button class="buy-now">Cantidad</button>
+            <!-- Selector de cantidad -->
+    <div class="quantity-selector">
+        <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Información de Contacto</h3>
+                <p>Email: <a href="mailto:contacto@danutplanet.com">contacto@danutplanet.com</a></p>
+                <p>Teléfono: (123) 456-7890</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Síguenos en Redes Sociales</h3>
+                <p>
+                    <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
+                    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>&copy; 2024 Dona Planet. Todos los derechos reservados.</p>
+        </div>
+        
+    </footer>
+
+    <script>
+        // Función para mostrar/ocultar el menú en dispositivos móviles
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active'); // Alternar la clase activa para mostrar/ocultar el menú
+        });
+
+        function increaseQuantity(button) {
+    const input = button.previousElementSibling;
+    input.value = parseInt(input.value) + 1;
+}
+
+function decreaseQuantity(button) {
+    const input = button.nextElementSibling;
+    if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
+    }
+}
+    </script>
+       
+</body>
+</html>

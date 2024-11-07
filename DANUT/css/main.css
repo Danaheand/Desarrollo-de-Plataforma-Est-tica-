@@ -1,0 +1,485 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f3e3; /* Fondo claro */
+    color: #333; /* Color de texto */
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/fondo/chipitas.jpg'); /* AsegÃºrate de incluir el nombre de tu imagen */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    width: 100%;
+}
+
+#header {
+    background-color: #ff8800; 
+    padding: 60px 40px; /* Aumenta el padding para mayor altura */
+    text-align: center;
+}
+
+.title-container {
+    flex: 1; /* Permitir que el tÃ­tulo ocupe el espacio disponible */
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Lobster', cursive; 
+    font-size: 3em; 
+    color: #d63a3a; 
+    margin: 0;
+}
+
+
+/* Menú Hamburguesa */
+.menu-toggle {
+    display: none; /* Ocultar por defecto */
+    flex-direction: column; 
+    cursor: pointer; 
+    margin: 10px auto; 
+}
+
+.menu-toggle .bar {
+    height: 3px; 
+    width: 25px; 
+    background-color: #333; 
+    margin: 3px 0; 
+}
+
+.menu-cart-container {
+    display: flex; /* Usar flexbox para elinear el menÃº y el carrito */
+    justify-content: flex-end; /* Colocar el carrito a la derecha */
+    align-items: center;
+}
+
+/* Menu de Navegación */
+nav {
+    width: 100%; /* Asegurar que el menÃº ocupe toda la anchura */
+    margin-top: 10px; /* SeparaciÃ³n del tÃ­tulo */
+}
+
+nav ul {
+    list-style-type: none; 
+    padding: 0;
+    display: flex; /* Usar flexbox para alinear elementos del menÃº */
+    justify-content: center; /* Centrar el menÃº */
+}
+
+nav ul li {
+    margin: 0 15px; 
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3e50; 
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+nav a:hover {
+    color: #e67e22; 
+}
+
+/* Estilos del carrito */
+.cart {
+    font-size: 24px; /* TamaÃ±o del icono del carrito */
+    margin-left: 20px; /* Espaciado a la izquierda del carrito */
+}
+
+/* Estilos para dispositivos mÃ³viles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Mostrar el menÃº hamburguesa en pantallas pequeÃ±as */
+    }
+
+    nav {
+        display: none; /* Ocultar menÃº de navegaciÃ³n por defecto en mÃ³viles */
+        flex-direction: column; /* Cambiar el menÃº a columna */
+        width: 100%;
+        background-color: #ff8800;
+        text-align: center;
+    }
+
+    nav.active {
+        display: flex; /* Mostrar el menÃº cuando se activa */
+        flex-direction: column; /* Colocar los elementos uno debajo del otro */
+    }
+
+    nav ul {
+        flex-direction: column; /* Convertir los elementos en columna */
+        padding: 0;
+        margin: 0;
+        width: 100%; /* Asegurar que el menÃº ocupa todo el ancho */
+    }
+
+    nav ul li {
+        padding: 10px 0; /* Espaciado entre elementos */
+        width: 100%;
+    }
+
+    nav a {
+        display: block; /* Hacer que el enlace ocupe toda la fila */
+        width: 100%;
+    }
+}
+
+.add-to-cart, .buy-now {
+    background-color: #FF8800; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar el ratÃ³n */
+    margin-top: 10px; /* Espaciado superior */
+    font-size: 16px; /* TamaÃ±o del texto */
+}
+
+.add-to-cart:hover, .buy-now:hover {
+    background-color: #d95d0e; /* Color mÃ¡s oscuro al pasar el ratÃ³n */
+}
+
+footer {
+    background-color: #FF8800; /* Fondo naranja */
+    padding: 40px 20px; /* Espaciado del footer */
+    text-align: center; /* Alinea el texto al centro */
+    color: #FFFFFF; /* Color del texto en blanco */
+    font-family: 'Montserrat', sans-serif; /* Cambiar la fuente */
+    font-size: 1.2em; /* TamaÃ±o del texto */
+    margin-top: 20px; /* Espacio arriba del pie de pÃ¡gina */
+    /*width: 100%;  Asegura que el pie de pÃ¡gina ocupa todo el ancho */
+    position: relative; /* Para que el pie de pÃ¡gina se posicione de manera correcta */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.footer-container {
+    display: flex; /* Usar flexbox para organizar secciones */
+    justify-content: space-around; /* Espaciado entre secciones */
+    max-width: 1200px; /* Ancho mÃ¡ximo */
+    margin: 0 auto; /* Centrar el contenedor */
+    flex-wrap: wrap; /* Permitir que se ajuste en pantallas pequeÃ±as */
+}
+
+.footer-section {
+    width: 30%; /* Ancho de cada secciÃ³n del footer */
+    text-align: left; /* Alinear texto a la izquierda */
+    margin-bottom: 20px; /* Margen inferior entre secciones */
+}
+
+.footer-section h3 {
+    color: #D63384; /* Color de encabezados en rosa */
+    font-size: 18px; /* TamaÃ±o del texto del encabezado */
+    margin-bottom: 10px; /* Espacio inferior del encabezado */
+}
+
+.footer-section p {
+    font-size: 14px; /* TamaÃ±o del texto de pÃ¡rrafos */
+    color: #2c3e50; /* Color del texto de pÃ¡rrafos en blanco */
+    margin: 5px 0; /* Margen vertical para pÃ¡rrafos */
+}
+
+/* Contenedor del copyright */
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff8800; /* Fondo del contenedor */
+    padding: 10px 0; /* Espacio alrededor del texto */
+    width: 100%; /* Ocupa todo el ancho del footer */
+    border-top: 1px solid #ffd1a1; /* LÃ­nea superior */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+/* Estilos del texto de copyright */
+.footer-copyright p {
+    color: #FFFFFF; /* Color del texto */
+    font-size: 1em; /* TamaÃ±o de fuente en escritorio */
+    margin: 0; /* Quitar margen */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilos Responsivos para mÃ³viles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Cambia las secciones a una columna en mÃ³viles */
+        text-align: center; /* Centrar el texto en pantallas pequeÃ±as */
+    }
+
+    footer p {
+        text-align: right; /* Alinea el texto a la derecha */
+        padding-right: 10px; /* Ajusta el padding para dar un poco de espacio a la derecha */
+        font-size: 0.9em; /* TamaÃ±o de fuente mÃ¡s pequeÃ±o en mÃ³vil */
+    }
+    .footer-copyright p {
+        font-size: 0.9em; /* Reduce el tamaÃ±o del texto en mÃ³viles */
+    }
+
+    .footer-section {
+        width: 80%; /* Ocupa todo el ancho en mÃ³viles */
+        margin-bottom: 10px; /* Reducir margen inferior entre secciones */
+    }
+}
+
+
+/* NUESTRAS DANUTS*/
+/* Sección de Donas */
+#donuts-section {
+    display: flex; /* Usar flexbox para alinear tarjetas */
+    flex-wrap: wrap; /* Permitir que las tarjetas se muevan a la siguiente lÃ­nea si es necesario */
+    justify-content: center; /* Centrar las tarjetas horizontalmente */
+    margin: 20px;
+}
+
+.donut-card {
+    background-color: #fff; /* Fondo blanco para tarjetas */
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 20px;
+    margin: 10px; /* Margen entre tarjetas */
+    width: 300px; /* Ancho de las tarjetas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centrar texto en tarjetas */
+    transition: transform 0.3s ease; /* Suaviza la transiciÃ³n del zoom */
+}
+
+.donut-image {
+    max-width: 100%; /* Hacer que la imagen ocupe todo el ancho de la tarjeta */
+    height: auto; /* Mantener la proporciÃ³n de la imagen */
+    border-radius: 8px; /* Bordes redondeados en imÃ¡genes */
+}
+
+.donut-card:hover {
+    transform: scale(1.05); /* Aumentar el tamaÃ±o de la tarjeta al pasar el ratÃ³n */
+}
+
+.price-label {
+    color: black; /* Color negro para el texto 'Precio:' */
+    font-weight: bold; /* Resaltar el texto 'Precio:' */
+}
+
+.price {
+    color: #888; /* Color gris suave para el precio */
+    font-weight: normal; /* Normaliza el peso de la fuente para el precio */
+}
+
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.quantity-btn {
+    background-color: #FF8800;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.quantity-btn:hover {
+    background-color: #d95d0e;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+/* CONTACTO*/
+/* Sección de contacto */
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.form-container {
+    width: 95%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #fffaf0;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ffd1a1;
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #d63384;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+form button:hover {
+    background-color: #d63384;
+}
+
+/*PREGUNTAS*/
+.faq-section {
+    margin: 20px;
+    background-color: #f9f3e3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.faq-section h2 {
+    font-size: 2em;
+    color: #ff8800;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.faq-instruction {
+    font-size: 1.1em;
+    color: #d63a3a;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.faq {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #ff8800;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.faq h3 {
+    font-size: 1.5em;
+    color: #ff8800;
+    margin: 0;
+}
+
+.faq p {
+    display: none; /* Ocultar respuestas inicialmente */
+    margin: 5px 0 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.faq:hover {
+    background-color: #ffe3e3;
+    transform: scale(1.02);
+}
+
+/*VIAJE*/
+.section-container {
+    display: flex; 
+    flex-direction: column; /* Cambia a columna para que la imagen esté arriba */
+    align-items: center; /* Centrar todo el contenido */
+    padding: 60px 40px; 
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin: 20px auto; 
+    max-width: 600px; /* Ancho máximo */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.image-container img {
+    width: 200px; /* Ancho específico en píxeles */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+}
+
+.text-container {
+    max-width: 500px; /* Ancho máximo del texto */
+    text-align: center; /* Centrar texto */
+}
+.text-container h2 {
+    font-size: 2.5em; /* Aumentar el tamaño del título */
+    color: #d63384; /* Color atractivo */
+    margin-bottom: 15px; /* Espacio debajo del título */
+    text-align: center; /* Centrar el título */
+}
+.text-container p {
+    font-size: 1.1em; /* Tamaño de texto más grande para facilitar la lectura */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #555; /* Color de texto suave */
+    text-align: justify; /* Justificar texto para un aspecto más limpio */
+}
+.text-content {
+    flex: 2; 
+    margin-left: 20px; /* Puedes aumentar esto si quieres más espacio */
+}
+
+/* Título de la historia */
+.story-title {
+    color: #d63384; /* Color del título */
+    font-size: 2em; /* Tamaño del texto del título */
+    margin-bottom: 20px; /* Espacio inferior */
+    font-style: italic; /* Texto en cursiva */
+    text-align: left; /* Alinear a la izquierda */
+}
+
+/* Párrafos */
+p {
+    line-height: 1.6; 
+    text-align: justify; 
+    margin: 10px 0; 
+}
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column; /* Cambiar a columna en móviles */
+    }
+
+    .image-container {
+        margin-right: 0; /* Quitar margen en móviles */
+        margin-bottom: 20px; /* Añadir margen inferior */
+    }
+
+    .story-title {
+        font-size: 1.5em; /* Reducir tamaño del título de la historia */
+        text-align: center; /* Centrar el título */
+    }
+
+    .text-container {
+        width: 80%; /* Asegurar que el texto ocupa el ancho completo */
+    }
+
+    p {
+        font-size: 0.9em; /* Tamaño de texto más pequeño */
+    }
+}
